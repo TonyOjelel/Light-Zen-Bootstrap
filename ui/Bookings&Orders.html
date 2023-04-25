@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>Ufarm-Bookings and Orders</title>
+    <meta
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no"
+      name="viewport"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css"
+    />
+    <!-- CSS Files -->
+    <link
+      href="../assets/css/light-bootstrap-dashboard.css?v=2.0.0 "
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/producelistReg.css" />
+    <link rel="stylesheet" href="/css/bookings.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+    <style>
+      .modal-header {
+        background-color: #28a43d;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div class="sidebar" data-image="../assets/farmer.jpg" data-color="green">
+        <div class="sidebar-wrapper">
+          <div class="logo">
+            <a href="/index.html" class="simple-text"> Ufarm </a>
+          </div>
+          <ul class="nav">
+            <li>
+              <a class="nav-link" href="/ui/dashboard.html">
+                <i class="nc-icon nc-chart-pie-35"></i>
+                <p>Dashboard</p>
+              </a>
+            </li>
+            <li>
+              <a class="nav-link" href="/ui/user.html">
+                <i class="nc-icon nc-circle-09"></i>
+                <p>User Profile</p>
+              </a>
+            </li>
+            <li>
+              <a class="nav-link" href="/ui/Products.html">
+                <i class="nc-icon nc-grid-45"></i>
+                <p>Our Products</p>
+              </a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="/ui/FarmerMgt.html">
+                <i class="fa fa-leaf"></i>
+                <p>Farmer Management</p>
+              </a>
+            </li>
+            <li>
+              <a class="nav-link" href="/ui/ProduceMgt.html">
+                <i class="nc-icon nc-atom"></i>
+                <p>Produce Management</p>
+              </a>
+            </li>
+            <li>
+              <a class="nav-link" href="/ui/Bookings&Orders.html">
+                <i class="nc-icon nc-delivery-fast"></i>
+                <p>Bookings and Orders</p>
+              </a>
+            </li>
+            <li>
+              <a class="nav-link" href="/ui/SalesMgt.html">
+                <i class="nc-icon nc-bell-55"></i>
+                <p>Sales Management</p>
+              </a>
+            </li>
+            <li class="nav-item active active-pro">
+              <a class="nav-link active" href="/ui/notifications.html">
+                <i class="nc-icon nc-bell-55"></i>
+                <p>Notifications</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="main-panel">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg" color-on-scroll="500">
+          <div class="container-fluid">
+            <!-- <a class="navbar-brand" href="/ui/dashboard.html"> Dashboard </a> -->
+            <div
+              class="collapse navbar-collapse justify-content-end"
+              id="navigation"
+            >
+              <ul class="nav navbar-nav mr-auto">
+                <li class="nav-item">
+                  <a href="/ui/FarmerMgt.html" class="nav-link">
+                    <i class="nc-icon nc-single-02"></i>
+                    <span class="d-lg-block">&nbsp;Farmers</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="/ui/Products.html" class="nav-link">
+                    <i class="nc-icon nc-grid-45"></i>
+                    <span class="d-lg-block">&nbsp;Products</span>
+                  </a>
+                </li>
+              </ul>
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                  <a href="/ui/notifications.html" class="nav-link">
+                    <i class="nc-icon nc-bell-55"></i>
+                    <span class="notification">5</span>
+                    &nbsp; Notifications
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="/ui/user.html" class="nav-link">
+                    <i class="nc-icon nc-settings-gear-64"></i>
+                    &nbsp; Settings
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/ui/auth/login.html">
+                    <span class="no-icon">Log out</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <!-- End Navbar -->
+        <br />
+
+        <!-- Button trigger modal-->
+        <div class="text-center">
+          <button
+            type="button"
+            class="btn btn-success"
+            data-toggle="modal"
+            data-target="#produceModal"
+          >
+            Bookings and Orders
+          </button>
+        </div>
+
+        <!-- Modal -->
+        <div
+          class="modal fade"
+          id="produceModal"
+          tabindex="-1"
+          aria-labelledby="produceModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="produceModalLabel">
+                  Bookings and Orders Form
+                </h5>
+                <button
+                  type="button"
+                  class="close"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <div class="form-group">
+                    <label for="produceName">Product Name</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="produceName"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="produceCategory">Product Category</label>
+                    <select class="form-control" id="produceCategory" required>
+                      <option value="">Select Category</option>
+                      <option value="poultry">Poultry</option>
+                      <option value="horticulture">Horticulture</option>
+                      <option value="dairy">Dairy</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="produceQuantity">Product Quantity</label>
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="produceQuantity"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="producePrice">Product Price (per unit)</label>
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="producePrice"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="produceDescription">Product Description</label>
+                    <textarea
+                      class="form-control"
+                      id="produceDescription"
+                      rows="3"
+                    ></textarea>
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-success"
+                  data-dismiss="modal"
+                >
+                  Close
+                </button>
+                <button type="button" class="btn btn-success">
+                  Save changes
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--End of Model-->
+        <div class="container">
+          <article class="card">
+            <header class="card-header">My Orders / Tracking</header>
+            <div class="card-body">
+              <h6>Order ID: OD45345345435</h6>
+              <article class="card">
+                <div class="card-body row">
+                  <div class="col">
+                    <strong>Estimated Delivery time:</strong> <br />2 hours
+                  </div>
+                  <div class="col">
+                    <strong>Shipping BY:</strong> <br />
+                    Safe Transport | <i class="fa fa-phone"></i> 256-775-418543
+                  </div>
+                  <div class="col">
+                    <strong>Status:</strong> <br />
+                    Picked by the courier
+                  </div>
+                  <div class="col">
+                    <strong>Tracking #:</strong> <br />
+                    BD045903594059
+                  </div>
+                </div>
+              </article>
+              <div class="track">
+                <div class="step active">
+                  <span class="icon"> <i class="fa fa-check"></i> </span>
+                  <span class="text">Order confirmed</span>
+                </div>
+                <div class="step active">
+                  <span class="icon"> <i class="fa fa-user"></i> </span>
+                  <span class="text"> Picked by courier</span>
+                </div>
+                <div class="step">
+                  <span class="icon"> <i class="fa fa-truck"></i> </span>
+                  <span class="text"> On the way </span>
+                </div>
+                <div class="step">
+                  <span class="icon"> <i class="fa fa-box"></i> </span>
+                  <span class="text">Ready for pickup</span>
+                </div>
+              </div>
+              <hr />
+              <ul class="row">
+                <li class="col-md-4">
+                  <figure class="itemside mb-3">
+                    <div class="aside">
+                      <img src="/assets/matooke.jpg" class="img-sm border" />
+                    </div>
+                    <figcaption class="info align-self-center">
+                      <p class="title">Fresh Farm Matooke <br />3 bunches</p>
+                      <span class="text-muted">UGX 75000 </span>
+                    </figcaption>
+                  </figure>
+                </li>
+                <li class="col-md-4">
+                  <figure class="itemside mb-3">
+                    <div class="aside">
+                      <img src="/assets/mangoes.jpg" class="img-sm border" />
+                    </div>
+                    <figcaption class="info align-self-center">
+                      <p class="title">Fresh Ripe Mangoes<br />1 Sack</p>
+                      <span class="text-muted">UGX 120000 </span>
+                    </figcaption>
+                  </figure>
+                </li>
+                <li class="col-md-4">
+                  <figure class="itemside mb-3">
+                    <div class="aside">
+                      <img src="/assets/eggstray.jpg" class="img-sm border" />
+                    </div>
+                    <figcaption class="info align-self-center">
+                      <p class="title">
+                        Fresh Farm Eggs <br />
+                        5 trays
+                      </p>
+                      <span class="text-muted">UGX 70000 </span>
+                    </figcaption>
+                  </figure>
+                </li>
+              </ul>
+              <hr />
+              <a
+                href="/ui/Products.html"
+                class="btn btn-warning"
+                data-abc="true"
+              >
+                <i class="fa fa-chevron-left"></i> Back to Products</a
+              >
+            </div>
+          </article>
+        </div>
+        <footer class="footer">
+          <div class="container-fluid">
+            <nav>
+              <ul class="footer-menu">
+                <li>
+                  <a href="#"> Location: Plot 10, Masajja, Kla, Uganda </a>
+                </li>
+                <li>
+                  <a href="#"> Call: 256-752-298936 </a>
+                </li>
+              </ul>
+              <p class="copyright text-center">
+                ©
+                <script>
+                  document.write(new Date().getFullYear());
+                </script>
+                <a href="/index.html">Ufarm</a>, made by Tony Ojelel
+              </p>
+            </nav>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  </body>
+  <!--   JS Files   -->
+  <script
+    src="../assets/js/light-bootstrap-dashboard.js?v=2.0.0 "
+    type="text/javascript"
+  ></script>
+</html>

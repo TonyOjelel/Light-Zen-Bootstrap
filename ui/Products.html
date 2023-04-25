@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>Ufarm-Our Products</title>
+    <meta
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no"
+      name="viewport"
+    />
+    <!--     Fonts and icons     -->
+    <!-- <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200"
+      rel="stylesheet"
+    /> -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css"
+    />
+    <!-- CSS Files -->
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link
+      href="../assets/css/light-bootstrap-dashboard.css?v=2.0.0 "
+      rel="stylesheet"
+    />
+  <link rel="stylesheet" href="/css/producelistReg.css" />
+  <style>
+    .modal-header {
+      background-color: #28a43d;
+    }
+  </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="sidebar" data-image="../assets/farmer.jpg" data-color="green">
+        <div class="sidebar-wrapper">
+          <div class="logo">
+            <a href="/index.html" class="simple-text"> Ufarm </a>
+          </div>
+          <ul class="nav">
+            <li>
+              <a class="nav-link" href="/ui/dashboard.html">
+                <i class="nc-icon nc-chart-pie-35"></i>
+                <p>Dashboard</p>
+              </a>
+            </li>
+            <li>
+              <a class="nav-link" href="/ui/user.html">
+                <i class="nc-icon nc-circle-09"></i>
+                <p>User Profile</p>
+              </a>
+            </li>
+            <li>
+              <a class="nav-link" href="/ui/Products.html">
+                <i class="nc-icon nc-grid-45"></i>
+                <p>Our Products</p>
+              </a>
+            </li>
+            <li>
+              <a class="nav-link" href="/ui/FarmerMgt.html">
+                <i class="fa fa-leaf"></i>
+                <p>Farmer Management</p>
+              </a>
+            </li>
+            <li>
+              <a class="nav-link" href="/ui/ProduceMgt.html">
+                <i class="nc-icon nc-atom"></i>
+                <p>Produce Management</p>
+              </a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="/ui/Bookings&Orders.html">
+                <i class="nc-icon nc-delivery-fast"></i>
+                <p>Bookings and Orders</p>
+              </a>
+            </li>
+            <li>
+              <a class="nav-link" href="/ui/SalesMgt.html">
+                <i class="nc-icon nc-bell-55"></i>
+                <p>Sales Management</p>
+              </a>
+            </li>
+            <li class="nav-item active active-pro">
+              <a class="nav-link active" href="/ui/notifications.html">
+                <i class="nc-icon nc-bell-55"></i>
+                <p>Notifications</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="main-panel">
+       <!-- Navbar -->
+       <nav class="navbar navbar-expand-lg" color-on-scroll="500">
+        <div class="container-fluid">
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navigation"
+          >
+            <ul class="nav navbar-nav mr-auto">             
+              <li class="nav-item">
+                <a href="/ui/FarmerMgt.html" class="nav-link">
+                  <i class="nc-icon nc-single-02"></i>
+                  <span class="d-lg-block">&nbsp;Farmers</span>
+                </a>
+              </li>         
+              <li class="nav-item">
+                <a href="/ui/Products.html" class="nav-link">
+                  <i class="nc-icon nc-grid-45"></i>
+                  <span class="d-lg-block">&nbsp;Products</span>
+                </a>
+              </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">               
+              <li class="nav-item">
+                <a
+                  href="/ui/notifications.html"
+                  class="nav-link" 
+                >
+                  <i class="nc-icon nc-bell-55"></i>
+                  <span class="notification">5</span>
+                  &nbsp; Notifications
+                </a> 
+              </li>
+              <li class="nav-item">
+                <a
+                  href="/ui/user.html"
+                  class="nav-link" 
+                >
+                  <i class="nc-icon nc-settings-gear-64"></i>                   
+                  &nbsp; Settings
+                </a> 
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/ui/auth/login.html">
+                  <span class="no-icon">Log out</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- End Navbar -->                
+        <br>
+    
+        <div class="map-container">
+          <div id="map"></div>
+        </div>
+        <br />
+        <h2 class="text-center mb-4">Select a category:</h2>
+        <div class="container mt-5">
+          <div class="row">
+            <div class="col-md-12">
+              <ul class="nav nav-tabs">
+                <li class="nav-item">
+                  <a class="nav-link active" data-toggle="tab" href="#poultry"
+                    >Poultry</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-toggle="tab" href="#horticulture"
+                    >Horticulture</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-toggle="tab" href="#dairy">Dairy</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="tab-content">
+            <div id="poultry" class="tab-pane fade in active">
+              <!-- here 1-->
+              <div id="poultry" class="tab-pane fade show active">
+                <br />
+                <h3>Poultry Products</h3>
+                <div class="row">
+                  <div class="col-md-4 mb-3">
+                    <div class="card">
+                      <img
+                        src="/assets/chickendrumstick.jpg"
+                        class="card-img-top"
+                        alt="..."
+                      />
+                      <div class="card-body">
+                        <h5 class="card-title">Chicken Drumstick</h5>
+                        <p class="card-text">
+                          Enjoy the rich and savory flavor of our chicken
+                          drumsticks, the perfect cut for those who love dark
+                          meat and want to enjoy a delicious and satisfying meal.
+                        </p>
+                        <h5>UGX 17,000</h5>
+                        <a href="#" class="btn btn-success">Add to Cart</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-3">
+                    <div class="card">
+                      <img
+                        src="/assets/eggs2.jpg"
+                        class="card-img-top"
+                        alt="..."
+                      />
+                      <div class="card-body">
+                        <h5 class="card-title">Fresh Farm Eggs</h5>
+                        <p class="card-text">
+                          Enjoy the delicious taste and numerous health benefits
+                          of our farm-fresh eggs. Rich in protein, vitamins, and
+                          minerals.
+                        </p>
+                        <h5>UGX 14,000</h5>
+                        <a href="#" class="btn btn-success">Add to Cart</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-3">
+                    <div class="card">
+                      <img
+                        src="/assets/chicken.jfif"
+                        class="card-img-top"
+                        alt="..."
+                      />
+                      <div class="card-body">
+                        <h5 class="card-title">Fresh Farm Chicken</h5>
+                        <p class="card-text">
+                          Indulge in the mouth-watering taste of our premium
+                          chicken, raised with care and expertly prepared for your dining
+                          pleasure.
+                        </p>
+                        <h5>UGX 25,000</h5>
+                        <a href="#" class="btn btn-success">Add to Cart</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- here1 -->
+            </div>
+            <div id="horticulture" class="tab-pane fade">
+              <!-- here 1-->
+              <div id="poultry" class="tab-pane fade show active">
+                <br />
+                <h3>Horticulture Products</h3>
+                <div class="row">
+                  <div class="col-md-4 mb-3">
+                    <div class="card">
+                      <img
+                        src="/assets/apples.jfif"
+                        class="card-img-top"
+                        alt="..."
+                      />
+                      <div class="card-body">
+                        <h5 class="card-title">Fresh Farm Apples</h5>
+                        <p class="card-text">
+                          Experience the crisp and juicy flavor of our premium
+                          apples, grown with care and harvested at the peak of their
+                          ripeness.
+                        </p>
+                        <h5>UGX 28,000</h5>
+                        <a href="#" class="btn btn-success">Add to Cart</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-3">
+                    <div class="card">
+                      <img
+                        src="/assets/carrots2.jpg"
+                        class="card-img-top"
+                        alt="..."
+                      />
+                      <div class="card-body">
+                        <h5 class="card-title">Fresh Farm Carrots</h5>
+                        <p class="card-text">
+                          Discover the sweet and crunchy flavor of our
+                          farm-fresh carrots, grown with care and harvested at the peak
+                          of their freshness.
+                        </p>
+                        <h5>UGX 35,000</h5>
+                        <a href="#" class="btn btn-success">Add to Cart</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-3">
+                    <div class="card">
+                      <img
+                        src="/assets/tomatoes1.jpg"
+                        class="card-img-top"
+                        alt="..."
+                      />
+                      <div class="card-body">
+                        <h5 class="card-title">Fresh Farm Tomatoes</h5>
+                        <p class="card-text">
+                          Experience the rich and tangy flavor of our
+                          sun-ripened tomatoes, grown with care and picked at the
+                          peak of their freshness.
+                        </p>
+                        <h5>UGX 15,000</h5>
+                        <a href="#" class="btn btn-success">Add to Cart</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- here1 -->
+            </div>
+            <div id="dairy" class="tab-pane fade">
+              <!-- here 1-->
+
+              <div id="poultry" class="tab-pane fade show active">
+                <br />
+                <h3>Dairy Products</h3>
+                <div class="row">
+                  <div class="col-md-4 mb-3">
+                    <div class="card">
+                      <img
+                        src="/assets/cowmilk.jpg"
+                        class="card-img-top"
+                        alt="..."
+                      />
+                      <div class="card-body">
+                        <h5 class="card-title">Fresh Cow Milk</h5>
+                        <p class="card-text">
+                          Enjoy the creamy taste and numerous health benefits of
+                          our fresh cow milk, straight from the farm.
+                        </p>
+                        <h5>UGX 10,000</h5>
+                        <a href="#" class="btn btn-success">Add to Cart</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-3">
+                    <div class="card">
+                      <img
+                        src="/assets/cheese.jpg"
+                        class="card-img-top"
+                        alt="..."
+                      />
+                      <div class="card-body">
+                        <h5 class="card-title">Fresh Farm Cheese</h5>
+                        <p class="card-text">
+                          Indulge in the rich and savory flavor of our cheddar
+                          cheese, perfect for snacking or cooking.
+                        </p>
+                        <h5>N/A</h5>
+                        <a href="#" class="btn btn-success">Add to Cart</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-3">
+                    <div class="card">
+                      <img
+                        src="/assets/yogurt.jpg"
+                        class="card-img-top"
+                        alt="..."
+                      />
+                      <div class="card-body">
+                        <h5 class="card-title">Fresh Farm Yogurt</h5>
+                        <p class="card-text">
+                          Enjoy the smooth and creamy taste of our Greek yogurt,
+                          made with natural ingredients and packed with protein.
+                        </p>
+                        <h5>N/A</h5>
+                        <a href="#" class="btn btn-success">Add to Cart</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- here1 -->
+            </div>
+          </div>
+        </div>
+        <footer class="footer">
+          <div class="container-fluid">
+            <nav>
+              <ul class="footer-menu">
+                <li>
+                  <a href="#">
+                      Location: Plot 10, Masajja, Kla, Uganda
+                  </a>
+              </li>
+              <li>
+                  <a href="#">
+                      Call: 256-752-298936
+                  </a>
+              </li>
+              </ul>
+              <p class="copyright text-center">
+                ©
+                <script>
+                  document.write(new Date().getFullYear());
+                </script>
+                <a href="/index.html">Ufarm</a>, made by Tony Ojelel
+              </p>
+            </nav>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </body>
+  <link
+    rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+  />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <!--  Chartist Plugin  -->
+  <script src="../assets/js/plugins/chartist.min.js"></script>
+  <!--  Notifications Plugin    -->
+  <script src="../assets/js/plugins/bootstrap-notify.js"></script>
+  <!-- Control Center for Bootstrap Dashboard -->
+  <script
+    src="../assets/js/light-bootstrap-dashboard.js?v=2.0.0 "
+    type="text/javascript"
+  ></script>
+  <!-- Bootstrap Dashboard methods -->
+  <script src="../assets/js/demo.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      // Javascript method's body can be found in assets/js/demos.js
+      demo.initGoogleMaps();
+    });
+  </script>
+</html>
